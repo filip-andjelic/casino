@@ -1,0 +1,7 @@
+<div>
+    <div class="col-md-6" ng-repeat="game in games track by $index">
+        <a href="/game/{{game.type}}/{{game.name}}">
+            <img src="{{game.icon}}">
+        </a>
+    </div>
+</div>

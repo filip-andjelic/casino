@@ -1,0 +1,237 @@
+body {
+	height: 100%;
+	background-image: url('/src/images/common/background.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.main{
+  display: block;
+}
+div.page-default {
+	color: white;
+	height: 100%;
+	div.wrap-content {
+		padding-left: 5%;
+		padding-right: 5%;
+		div.head-part {
+			margin-top: 50px;
+			div:first-child {
+				padding-top: 20px;
+			}
+			div:last-child {
+				text-align: center;
+				&>p {
+					text-transform: uppercase;
+					font-weight: 600;
+					letter-spacing: 2px;
+				}
+			}
+			div.count-money {
+				span {
+					position: relative;
+					left: 25%;
+					top: 5px;
+					float: left;
+					background-image: url('/src/images/common/counter.png');
+					background-repeat: no-repeat;
+					background-size: cover;
+					p {
+						//position: absolute;
+					}
+				}
+				span.counter {
+					width: 45px;
+					height: 60px;
+					p {
+						font-size: 2.2em;
+						font-weight: 600;
+						padding-top: 10px;
+					}
+				}
+				span.separator {
+					background-image: none;
+					font-size: 2em;
+					padding-top: 13px;
+					margin: 0 3px 0 3px;
+				}
+				span.counter-sm {
+					width: 30px;
+					height: 47px;
+					margin-top: 13px;
+					p {
+						font-size: 1.4em;
+						font-weight: 600;
+						padding-top: 8px;
+					}
+				}
+				span.value {
+					background-image: none;
+					font-size: 3.5em;
+					font-weight: 600;
+					margin-left: 7px;
+					margin-top: -5px;
+				}
+			}
+		}
+		div.choose-part {
+			padding: 90px 10% 20px 10%;
+			border-bottom: 3px ridge silver;
+			div.category {
+				float: left;
+				width: 50%;
+				text-align: center;
+				margin-top: 20px;
+				height: 240px;
+				//background-image: url('/src/images/common/game-shadow-big.png');
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: 0px 100px;
+				a:link {
+					color: white;
+					font-size: 3.2em;
+					font-weight: 600;
+					text-transform: uppercase;
+					letter-spacing: -1px;
+					line-height: 1.2em;
+					text-decoration: none;
+					text-shadow: 0px 7px 20px black;
+					&:visited {
+			      text-decoration: none;
+					}
+					&:hover {
+						text-decoration: none;
+						text-shadow: 0px 0px 50px gold;
+					}
+					&:active {
+						text-decoration: none;
+						text-shadow: 0px 7px 20px gold;
+					}
+				}
+				img {
+					opacity: 0;
+					animation-name: bringUpBg;
+			    animation-duration: 1s;
+			    animation-delay: 1s;
+			    animation-iteration-count: 1;
+			    animation-fill-mode: forwards;
+				}
+			}
+		}
+		.cat-3, .cat-4 {
+			position: relative;
+			padding: 0px 10% 0px 10%;
+				img {
+					position: absolute;
+					left: 7%;
+					bottom: 20px;
+				}
+			}
+		div.cat-1 {
+			animation-name: fadeInDown;
+	    animation-duration: 2s;
+	    animation-iteration-count: 1;
+		}
+		div.cat-2 {
+			animation-name: fadeInRight;
+	    animation-duration: 2s;
+	    animation-iteration-count: 1;
+		}
+		div.cat-3 {
+			animation-name: fadeInLeft;
+	    animation-duration: 2s;
+	    animation-iteration-count: 1;
+		}
+		div.cat-4 {
+			animation-name: fadeInUp;
+	    animation-duration: 2s;
+	    animation-iteration-count: 1;
+		}
+		div.menu-part {
+			margin-top: 25px;
+			div {
+				text-align: center;
+				a:link {
+					font-size: 2em;
+					font-weight: 600;
+					color: white;
+					text-decoration: none;
+					&:visited {
+						text-decoration:none;
+						color: white;
+					}
+					&:hover {
+						text-decoration:none;
+						color: #ca9d3d;
+						
+					}
+					&:active {
+						text-decoration:none;
+						color: white;
+					}
+				}
+			}
+		}
+		div.select-part {
+			margin-top: 30px;
+			height: 600px;
+			&>div {
+				height: 100%;
+			}
+			div.arrow-left, div.arrow-right {
+				position: relative;
+				top: 35%;
+				width: 86px;
+				height: 113px;
+				background-image: url('/src/images/common/arrows.png');
+			}
+			.arrow-left:hover {
+				background-position: 0 113px;
+			}
+			.arrow-right {
+				margin-left: 36%;
+				background-position: 86px 0;
+				&:hover {
+					background-position: 86px 113px;
+				}
+			}
+			div.col-lg-8 {
+				padding-left: 0;
+				border-bottom: 3px ridge silver;
+				div.col-lg-3 {
+					padding-left: 0;
+					position: relative;
+					img.shadow {
+						position: absolute;
+						bottom: -25px;
+					}
+					&>a:hover {
+						animation-name: hvr-bob;
+				    animation-duration: 2s;
+				    animation-iteration-count: infinite;
+					}
+				}
+			}
+		}
+		div.random-part {
+			margin-top: 60px;
+			margin-bottom: 70px;
+			padding-left: 20%;
+			div.link-img {
+				float: left;
+				width: 190px;
+				height: 130px;
+				border: 4px outset silver;
+				border-radius: 25px 25px 25px 25px;
+				margin-right: 2%;
+				background-image: url("/src/images/games/oryx/AE/188X125.png");
+				background-size: cover;
+				animation-name: flipInX;
+		    animation-duration: 2s;
+		    animation-iteration-count: 1;
+				img {
+					border-radius: 25px 25px 25px 25px;
+				}
+			}
+		}
+	}
+}
