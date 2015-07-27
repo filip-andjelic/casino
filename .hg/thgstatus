@@ -1,0 +1,8 @@
+m
+msrc/js/app
+rsrc/js/app/components/oryx_game
+rsrc/js/app/components/oryx_game/controllers
+rsrc/js/app/components/oryx_game/services
+msrc/js/app/views/main
+msrc/sass
+rtest

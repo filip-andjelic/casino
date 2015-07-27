@@ -1,0 +1,17 @@
+# switch to glob syntax.
+syntax: glob
+
+# ignore .idea folder
+.idea/**
+
+# ignore node_modules folder (npm)
+node_modules/**
+
+# ignore build/js and build/css
+build/js/**
+build/css/**
+build/app/**
+build/images/**
+
+# ignore .sass-cache
+.sass-cache/**
