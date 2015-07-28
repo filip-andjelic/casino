@@ -1,4 +1,4 @@
-<div class="page-default">
+<div class="page-default" ng-controller="MainController">
 	<div id="landing-page" class="container-fluid">
 		<div class="container wrap-content">
 			<div class="row head-part">
@@ -24,75 +24,13 @@
 	        </div>
 	      </div>
 	    </div><!--end of head-->
-	    <!-- THIS IS MAIN MENU ON FIRST PAGE
 	    <div class="row choose-part">
-	    	<div class="category cat-1"> <a href="#">card&amp;table games</a> <img src="/src/images/common/game-shadow-big.png" alt=""></div>
-	    	<div class="category cat-2"> <a href="#">Novomatic games</a> <img src="/src/images/common/game-shadow-big.png" alt=""></div>
-	    	<div class="category cat-3"> <a href="#">Octavian games</a> <img src="/src/images/common/game-shadow-big.png" alt=""></div>
-	    	<div class="category cat-4"> <a href="#">Live games</a> <img src="/src/images/common/game-shadow-big.png" alt=""></div>
-	    </div> -->
-	    <!--end of choose category -->
-	    <div class="row menu-part">
-	    	<div><a href="#"> Nazad na početnu stranu </a></div>
-	    </div>
-	    <div class="row select-part">
-	    	<div class="col-lg-2">
-	    		<div class="arrow-left"> </div>
+	    	<div ng-repeat="category in categories" class="category cat-{{category.id}}">
+	    		<a id="{{category.id}}" ng-click="goTo(category.id)" href="/category/{{category.id}}">{{category.name}}</a>
+	    		<!--<a href="#">{{category.name}}</a>-->
+	    		<img src="/src/images/common/game-shadow-big.png" alt="">
 	    	</div>
-	    	<div class="col-lg-8">
-	    		<div class="col-lg-3"> 
-	    			<a href="#"><img src="/src/images/games/oryx/AE/kiosk.png" alt=""></a>
-	    			<img src="/src/images/common/game-shadow.png" alt="" class="shadow">
-	    		</div>
-	    		<div class="col-lg-3"> 
-	    			<a href="#"><img src="/src/images/games/oryx/AE/kiosk.png" alt=""></a>
-	    			<img src="/src/images/common/game-shadow.png" alt="" class="shadow">
-	    		</div>
-	    		<div class="col-lg-3"> 
-	    			<a href="#"><img src="/src/images/games/oryx/AE/kiosk.png" alt=""></a>
-	    			<img src="/src/images/common/game-shadow.png" alt="" class="shadow">
-	    		</div>
-	    		<div class="col-lg-3"> 
-	    			<a href="#"><img src="/src/images/games/oryx/AE/kiosk.png" alt=""></a>
-	    			<img src="/src/images/common/game-shadow.png" alt="" class="shadow">
-	    		</div>
-	    		<div class="col-lg-3"> 
-	    			<a href="#"><img src="/src/images/games/oryx/AE/kiosk.png" alt=""></a>
-	    			<img src="/src/images/common/game-shadow.png" alt="" class="shadow">
-	    		</div>
-	    		<div class="col-lg-3"> 
-	    			<a href="#"><img src="/src/images/games/oryx/AE/kiosk.png" alt=""></a>
-	    			<img src="/src/images/common/game-shadow.png" alt="" class="shadow">
-	    		</div>
-	    		<div class="col-lg-3"> 
-	    			<a href="#"><img src="/src/images/games/oryx/AE/kiosk.png" alt=""></a>
-	    			<img src="/src/images/common/game-shadow.png" alt="" class="shadow">
-	    		</div>
-	    		<div class="col-lg-3"> 
-	    			<a href="#"><img src="/src/images/games/oryx/AE/kiosk.png" alt=""></a>
-	    			<img src="/src/images/common/game-shadow.png" alt="" class="shadow">
-	    		</div>
-	    		<div class="col-lg-3"> 
-	    			<a href="#"><img src="/src/images/games/oryx/AE/kiosk.png" alt=""></a>
-	    			<img src="/src/images/common/game-shadow.png" alt="" class="shadow">
-	    		</div>
-	    		<div class="col-lg-3"> 
-	    			<a href="#"><img src="/src/images/games/oryx/AE/kiosk.png" alt=""></a>
-	    			<img src="/src/images/common/game-shadow.png" alt="" class="shadow">
-	    		</div>
-	    		<div class="col-lg-3"> 
-	    			<a href="#"><img src="/src/images/games/oryx/AE/kiosk.png" alt=""></a>
-	    			<img src="/src/images/common/game-shadow.png" alt="" class="shadow">
-	    		</div>
-	    		<div class="col-lg-3"> 
-	    			<a href="#"><img src="/src/images/games/oryx/AE/kiosk.png" alt=""></a>
-	    			<img src="/src/images/common/game-shadow.png" alt="" class="shadow">
-	    		</div>
-	    	</div>
-	    	<div class="col-lg-2">
-	    		<div class="arrow-right"> </div>
-	    	</div>
-	    </div>
+	  	</div><!--end of choose-->
 	    <div class="row random-part">
 	    	<div class="link-img"><a href="#"><!--<img src="/src/images/games/oryx/AE/188X125.png" alt="">--></a></div>
 	    	<div class="link-img"><a href="#"><!--<img src="/src/images/games/oryx/BB/188X125.png" alt="">--></a></div>

@@ -6,7 +6,6 @@
  * http://www.bild-studio.com
  */
 angular.module("mainModule").service('MainService', ['$http', '$q', function($http, $q){
-
     /**
      * Return main data
      * @returns {*}

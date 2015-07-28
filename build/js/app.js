@@ -127,7 +127,6 @@ gameModule.config(['$stateProvider', function ($stateProvider){
  * Copyright (c) 2015 Bild Studio
  * http://www.bild-studio.com
  */
-
 var mainModule = angular.module('mainModule', ['libModule']);
 mainModule.config(['$stateProvider', function ($stateProvider){
     $stateProvider
@@ -213,7 +212,6 @@ angular.module("gameModule").service("GameService", ["$http", "$q", function($ht
  * http://www.bild-studio.com
  */
 angular.module("mainModule").service('MainService', ['$http', '$q', function($http, $q){
-
     /**
      * Return main data
      * @returns {*}
@@ -255,7 +253,6 @@ angular.module("aboutModule").controller("AboutController", ["$scope", function(
  * http://www.bild-studio.com
  */
 angular.module('categoryModule').controller('CategoryController', ['$scope', 'CategoryService', function($scope, CategoryService){
-    console.log("CategoryController");
 
     $scope.games = [];
 
@@ -315,13 +312,16 @@ console.log($stateParams);
  * http://www.bild-studio.com
  */
 angular.module("mainModule").controller("MainController", ["$scope", "MainService", function($scope, MainService){
-    console.log("MainController");
-
+ 		
     $scope.categories = [];
 
     MainService.getMainPageData().then(function(response){
-        //console.log(response);
         $scope.categories = response.categories;
     });
 
+    $scope.goTo = function goTo(pageId) {
+
+	  };
+
+	  
 }]);

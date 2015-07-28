@@ -5,7 +5,6 @@
  * Copyright (c) 2015 Bild Studio
  * http://www.bild-studio.com
  */
-
 var mainModule = angular.module('mainModule', ['libModule']);
 mainModule.config(['$stateProvider', function ($stateProvider){
     $stateProvider

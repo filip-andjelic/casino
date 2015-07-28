@@ -6,13 +6,16 @@
  * http://www.bild-studio.com
  */
 angular.module("mainModule").controller("MainController", ["$scope", "MainService", function($scope, MainService){
-    console.log("MainController");
-
+ 		
     $scope.categories = [];
 
     MainService.getMainPageData().then(function(response){
-        //console.log(response);
         $scope.categories = response.categories;
     });
 
+    $scope.goTo = function goTo(pageId) {
+
+	  };
+
+	  
 }]);

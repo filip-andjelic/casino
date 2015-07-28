@@ -74,6 +74,7 @@ div.page-default {
 			}
 		}
 		div.choose-part {
+			min-height: 633px;
 			padding: 90px 10% 20px 10%;
 			border-bottom: 3px ridge silver;
 			div.category {
@@ -86,8 +87,8 @@ div.page-default {
 				background-size: contain;
 				background-repeat: no-repeat;
 				background-position: 0px 100px;
-				a:link {
-					color: white;
+				a {
+					color: white !important;
 					font-size: 3.2em;
 					font-weight: 600;
 					text-transform: uppercase;
@@ -96,13 +97,16 @@ div.page-default {
 					text-decoration: none;
 					text-shadow: 0px 7px 20px black;
 					&:visited {
+						color: white;
 			      text-decoration: none;
 					}
 					&:hover {
+						color: white;
 						text-decoration: none;
 						text-shadow: 0px 0px 50px gold;
 					}
 					&:active {
+						color: white;
 						text-decoration: none;
 						text-shadow: 0px 7px 20px gold;
 					}
@@ -150,7 +154,7 @@ div.page-default {
 			margin-top: 25px;
 			div {
 				text-align: center;
-				a:link {
+				a {
 					font-size: 2em;
 					font-weight: 600;
 					color: white;

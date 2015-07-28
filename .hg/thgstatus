@@ -1,8 +1,13 @@
 m
 msrc/js/app
+msrc/js/app/components/category/controllers
+msrc/js/app/components/main
+msrc/js/app/components/main/controllers
+msrc/js/app/components/main/services
 rsrc/js/app/components/oryx_game
 rsrc/js/app/components/oryx_game/controllers
 rsrc/js/app/components/oryx_game/services
+msrc/js/app/views/category
 msrc/js/app/views/main
 msrc/js/widgets/Example
 msrc/sass
