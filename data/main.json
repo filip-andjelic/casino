@@ -1,0 +1,19 @@
+{
+    "games":[
+        {
+            "name": "ORYX_BB",
+            "type": "oryx",
+            "icon": "/build/images/games/oryx/BB/kiosk.png"
+        },
+        {
+            "name": "ORYX_AE",
+            "type": "oryx",
+            "icon": "/build/images/games/oryx/AE/kiosk.png"
+        },
+        {
+            "name": "ORYX_G7C",
+            "type": "oryx",
+            "icon": "/build/images/games/oryx/G7C/kiosk.png"
+        }
+    ]
+}
