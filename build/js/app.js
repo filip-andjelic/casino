@@ -73,9 +73,24 @@ aboutModule.config(['$stateProvider', function ($stateProvider) {
 var categoryModule = angular.module('categoryModule', ['libModule']);
 categoryModule.config(['$stateProvider', function ($stateProvider){
     $stateProvider
-        .state('category', {
+        /*.state('category', {
             url: '/category/{id}',
             templateUrl: "/build/app/views/category/main.html",
+            controller: "CategoryController"
+        });*/
+		.state('category-one', {
+            url: '/category/1',
+            templateUrl: "/build/app/views/category/card-table.html",
+            controller: "CategoryController"
+        })
+        .state('category-two', {
+            url: '/category/2',
+            templateUrl: "/build/app/views/category/novomatic.html",
+            controller: "CategoryController"
+        })
+        .state('category-three', {
+            url: '/category/3',
+            templateUrl: "/build/app/views/category/octavian.html",
             controller: "CategoryController"
         });
 }]);
@@ -245,7 +260,7 @@ angular.module("aboutModule").controller("AboutController", ["$scope", function(
 
 /* ------------------------------------------------------------------------------------------------------------ */
 
-/**
+/*
  * File name: category.controller.js
  * Author: Lindon Camaj
  * Date: 7/23/2015
@@ -255,15 +270,27 @@ angular.module("aboutModule").controller("AboutController", ["$scope", function(
 angular.module('categoryModule').controller('CategoryController', ['$scope', 'CategoryService', function($scope, CategoryService){
 
     $scope.games = [];
-
-    var result = CategoryService.getCategoryData('test');
+    var result = CategoryService.getCategoryData('catId');
     if(typeof result !== "undefined" && result !== null){
         result.then(function(response){
-            console.log(response);
-            $scope.games = response.games;
+            $scope.games = response.category;
         });
     }
+    $scope.prevSlide = function(item) {
+    	var slide = item.toElement.parentElement.nextSibling.children;
+    	//console.log(slide);
+    	$.each(slide, function(index, name){
+    		var el = index;
+    		console.log(slide[el].class);
 
+    	});
+    	
+    };
+
+    $scope.nextSlide = function(item) {
+    	var slide = item;
+    	console.log(slide);
+    };
 }]);
 
 /* ------------------------------------------------------------------------------------------------------------ */
@@ -319,9 +346,12 @@ angular.module("mainModule").controller("MainController", ["$scope", "MainServic
         $scope.categories = response.categories;
     });
 
-    $scope.goTo = function goTo(pageId) {
+    /*$scope.goTo = function goTo(pageId) {
 
-	  };
+	};
 
-	  
+	$watchCollection
+
+	var i = $("div.choose-part");
+	console.log(i);  */
 }]);

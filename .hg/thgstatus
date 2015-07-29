@@ -1,5 +1,7 @@
 m
+mdata
 msrc/js/app
+msrc/js/app/components/category
 msrc/js/app/components/category/controllers
 msrc/js/app/components/main
 msrc/js/app/components/main/controllers

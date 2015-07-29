@@ -1,4 +1,4 @@
-/**
+/*
  * File name: category.controller.js
  * Author: Lindon Camaj
  * Date: 7/23/2015
@@ -6,16 +6,27 @@
  * http://www.bild-studio.com
  */
 angular.module('categoryModule').controller('CategoryController', ['$scope', 'CategoryService', function($scope, CategoryService){
-    console.log("CategoryController");
 
     $scope.games = [];
-
-    var result = CategoryService.getCategoryData('test');
+    var result = CategoryService.getCategoryData('catId');
     if(typeof result !== "undefined" && result !== null){
         result.then(function(response){
-            console.log(response);
-            $scope.games = response.games;
+            $scope.games = response.category;
         });
     }
+    $scope.prevSlide = function(item) {
+    	var slide = item.toElement.parentElement.nextSibling.children;
+    	//console.log(slide);
+    	$.each(slide, function(index, name){
+    		var el = index;
+    		console.log(slide[el].class);
 
+    	});
+    	
+    };
+
+    $scope.nextSlide = function(item) {
+    	var slide = item;
+    	console.log(slide);
+    };
 }]);

@@ -13,9 +13,12 @@ angular.module("mainModule").controller("MainController", ["$scope", "MainServic
         $scope.categories = response.categories;
     });
 
-    $scope.goTo = function goTo(pageId) {
+    /*$scope.goTo = function goTo(pageId) {
 
-	  };
+	};
 
-	  
+	$watchCollection
+
+	var i = $("div.choose-part");
+	console.log(i);  */
 }]);
