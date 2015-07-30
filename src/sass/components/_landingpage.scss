@@ -202,9 +202,16 @@ div.page-default {
 			div.col-lg-8 {
 				padding-left: 0;
 				border-bottom: 3px ridge silver;
+				&>div {
+					width: 100%;
+					height: 100%;
+				}
 				div.col-lg-3 {
 					padding-left: 0;
 					position: relative;
+					animation-name: zoomIn;
+			    animation-duration: 1s;
+			    animation-iteration-count: 1;
 					img.shadow {
 						position: absolute;
 						bottom: -25px;

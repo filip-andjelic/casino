@@ -274,22 +274,35 @@ angular.module('categoryModule').controller('CategoryController', ['$scope', 'Ca
     if(typeof result !== "undefined" && result !== null){
         result.then(function(response){
             $scope.games = response.category;
+            $scope.Math = window.Math;
+            /* 
+             this function takes exact number of game icons
+             for particular page and calculates how many slides
+             is needed to be made, 12 icons per slide
+            */
+            $scope.gameGroup = function(index) {
+            	var num = Math.ceil($scope.games[index].games.length/12);
+            	var niz = [];
+            	for (num; num>0; num--) niz.push(num);
+            	return niz;
+            };
         });
     }
-    $scope.prevSlide = function(item) {
-    	var slide = item.toElement.parentElement.nextSibling.children;
-    	//console.log(slide);
-    	$.each(slide, function(index, name){
-    		var el = index;
-    		console.log(slide[el].class);
 
-    	});
-    	
+    $scope.prevSlide = function(item) {
+    	var trigger = $(item.target);
+    	var slideActive = trigger.parent().next().find('div.active');
+    	var slidePrev = slideActive.prev();
+    	slideActive.addClass('hide').removeClass('active');
+    	slidePrev.removeClass('hide').addClass('active');
     };
 
     $scope.nextSlide = function(item) {
-    	var slide = item;
-    	console.log(slide);
+    	var trigger = $(item.target);
+    	var slideActive = trigger.parent().prev().find('div.active');
+    	var slideNext = slideActive.next();
+    	slideActive.addClass('hide').removeClass('active');
+    	slideNext.removeClass('hide').addClass('active');
     };
 }]);
 
