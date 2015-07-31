@@ -220,14 +220,14 @@
           "icon": "/build/images/games/oryx/RQ/kiosk.png"
         },
         {
-          "name": "ORYX_WP",
+          "name": "ORYX_DP",
           "type": "oryx",
-          "icon": "/build/images/games/oryx/WP/kiosk.png"
+          "icon": "/build/images/games/oryx/DP/kiosk.png"
         },
         {
-          "name": "ORYX_WS",
+          "name": "ORYX_FS",
           "type": "oryx",
-          "icon": "/build/images/games/oryx/WS/kiosk.png"
+          "icon": "/build/images/games/oryx/FS/kiosk.png"
         },
         {
           "name": "ORYX_XH",
