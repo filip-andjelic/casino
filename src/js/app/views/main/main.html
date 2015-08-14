@@ -1,41 +1,14 @@
 <div class="page-default" ng-controller="MainController">
 	<div id="landing-page" class="container-fluid">
 		<div class="container wrap-content">
-			<div class="row head-part">
-	      <div class="col-lg-4"> <a href="#"><img src="/src/images/common/logo.png" alt=""></a> </div>
-	      <div class="col-lg-4"><!--empty space--></div>
-	      <div class="col-lg-4">
-	      	<p>Stanje</p>
-	      	<div class="count-money"> 
-	      		<span class="counter">
-	      			<p>1</p>
-	      		</span>
-	      		<span class="counter">
-	      			<p>1</p>
-	      		</span> 
-	      		<span class="separator"> , </span>
-	      		<span class="counter-sm">
-	      			<p>0</p>
-	      		</span>
-	      		<span class="counter-sm">
-	      			<p>0</p>
-	      		</span>
-	      		<span class="value"> &euro; </span>
-	        </div>
-	      </div>
-	    </div><!--end of head-->
+	    <div ng-include="'/build/app/views/main/game-frame.html'"></div><!--this is iframe for game, it stays hidden until game is clicked-->
 	    <div class="row choose-part">
-	    	<div ng-repeat="category in categories" class="category cat-{{category.id}}">
+	    	<div ng-repeat="category in categories" class="category cat-{{category.id}}"><!-- here we iterate through game categories and list them in main menu-->
 	    		<a id="{{category.id}}" ng-click="goTo(category.id)" href="/category/{{category.id}}">{{category.name}}</a>
-	    		<!--<a href="#">{{category.name}}</a>-->
 	    		<img src="/src/images/common/game-shadow-big.png" alt="">
 	    	</div>
-	  	</div><!--end of choose-->
-	    <div class="row random-part">
-	    	<div class="link-img"><a href="#"><!--<img src="/src/images/games/oryx/AE/188X125.png" alt="">--></a></div>
-	    	<div class="link-img"><a href="#"><!--<img src="/src/images/games/oryx/BB/188X125.png" alt="">--></a></div>
-	    	<div class="link-img"><a href="#"><!--<img src="/src/images/games/oryx/G7C/188X125.png" alt="">--></a></div>
-	    </div><!--end of random-->
+	  	</div>
+	  	<div ng-include="'/build/app/views/main/random.html'"></div><!--this part takes random starting number and displays 3 games-->
     </div>
-  </div> <!-- end of landing page -->
+  </div><!--end of landing-page--> 
 </div>

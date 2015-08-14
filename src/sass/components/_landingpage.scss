@@ -14,7 +14,9 @@ div.page-default {
 		padding-left: 5%;
 		padding-right: 5%;
 		div.head-part {
-			margin-top: 50px;
+			margin-top: 30px;
+			padding-bottom: 20px;
+			border-bottom: 1px ridge silver;
 			div:first-child {
 				padding-top: 20px;
 			}
@@ -26,21 +28,20 @@ div.page-default {
 					letter-spacing: 2px;
 				}
 			}
+			/* this part styles 'stanje' part of header */
 			div.count-money {
 				span {
 					position: relative;
-					left: 25%;
-					top: 5px;
+					left: 26%;
+					top: -10px;
 					float: left;
-					background-image: url('/src/images/common/counter.png');
-					background-repeat: no-repeat;
-					background-size: cover;
+					text-shadow: 0px 0px 20px gold;
 					p {
 						//position: absolute;
 					}
 				}
 				span.counter {
-					width: 45px;
+					width: 22px;
 					height: 60px;
 					p {
 						font-size: 2.2em;
@@ -55,7 +56,7 @@ div.page-default {
 					margin: 0 3px 0 3px;
 				}
 				span.counter-sm {
-					width: 30px;
+					width: 20px;
 					height: 47px;
 					margin-top: 13px;
 					p {
@@ -68,11 +69,12 @@ div.page-default {
 					background-image: none;
 					font-size: 3.5em;
 					font-weight: 600;
-					margin-left: 7px;
+					margin-left: 17px;
 					margin-top: -5px;
 				}
 			}
 		}
+		/*this part styles main menu */
 		div.choose-part {
 			min-height: 633px;
 			padding: 90px 10% 20px 10%;
@@ -98,7 +100,7 @@ div.page-default {
 					text-shadow: 0px 7px 20px black;
 					&:visited {
 						color: white;
-			      text-decoration: none;
+			      		text-decoration: none;
 					}
 					&:hover {
 						color: white;
@@ -150,12 +152,17 @@ div.page-default {
 	    animation-duration: 2s;
 	    animation-iteration-count: 1;
 		}
+		/* this part styles 'nazad na pocetnu stranu' menu*/
 		div.menu-part {
-			margin-top: 25px;
+			margin-top: 30px;
 			div {
-				text-align: center;
+				text-align: left;
+				span.glyphicon {
+					margin-right: 5px;
+					vertical-align: text-top;
+				}
 				a {
-					font-size: 2em;
+					font-size: 1.2em;
 					font-weight: 600;
 					color: white;
 					text-decoration: none;
@@ -167,7 +174,11 @@ div.page-default {
 					&:hover {
 						text-decoration:none;
 						color: #ca9d3d;
-						
+						span.glyphicon {
+							animation-name: slideOutLeft;
+			    			animation-duration: 1s;
+			    			animation-fill-mode: forwards;
+						}
 					}
 					&:active {
 						text-decoration:none;
@@ -176,9 +187,11 @@ div.page-default {
 				}
 			}
 		}
+		/*this part styles game icons menu */
 		div.select-part {
 			margin-top: 30px;
 			height: 600px;
+			border-bottom: 3px ridge silver;
 			&>div {
 				height: 100%;
 			}
@@ -201,7 +214,6 @@ div.page-default {
 			}
 			div.col-lg-8 {
 				padding-left: 0;
-				border-bottom: 3px ridge silver;
 				&>div {
 					width: 100%;
 					height: 100%;
@@ -224,26 +236,67 @@ div.page-default {
 				}
 			}
 		}
+		/* this part styles random part of page */
 		div.random-part {
 			margin-top: 60px;
 			margin-bottom: 70px;
-			padding-left: 20%;
+			//padding-left: 20%;
+			div.recommend {
+				width: 30%;
+				padding: 5px 10px 3px 11px;
+				margin-top: -61px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 40px;
+				text-align: center;
+				border: 3px ridge silver;
+				border-top: none;
+				border-bottom-right-radius: 2em 4em;
+				border-bottom-left-radius: 2em 4em;
+				z-index: 9988;
+				h6{
+					font-weight: 600;
+					font-size: 1.4em;
+					text-transform: uppercase;
+					text-shadow: -3px 2px 50px black;
+				}
+			}
 			div.link-img {
+				left: 20%;
+				position: relative;
 				float: left;
 				width: 190px;
 				height: 130px;
 				border: 4px outset silver;
 				border-radius: 25px 25px 25px 25px;
 				margin-right: 2%;
-				background-image: url("/src/images/games/oryx/AE/188X125.png");
-				background-size: cover;
 				animation-name: flipInX;
-		    animation-duration: 2s;
-		    animation-iteration-count: 1;
+			    animation-duration: 2s;
+			    animation-iteration-count: 1;
 				img {
+					width: 182px;
+			  		height: 122px;
 					border-radius: 25px 25px 25px 25px;
 				}
 			}
 		}
+	}
+}
+/* this part styles iframe for game */
+.game-frame {
+	background-color: black;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9998;
+	//visibility: hidden;
+	display: none;
+	.escape {
+		position:absolute;
+		top: 30px;
+		right: 30px;
+		z-index: 9999;
 	}
 }

@@ -26,20 +26,35 @@ angular.module('categoryModule').controller('CategoryController', ['$scope', 'Ca
             };
         });
     }
-
+    /* this function uploads new slide of games */
     $scope.prevSlide = function(item) {
     	var trigger = $(item.target);
     	var slideActive = trigger.parent().next().find('div.active');
     	var slidePrev = slideActive.prev();
-    	slideActive.addClass('hide').removeClass('active');
-    	slidePrev.removeClass('hide').addClass('active');
+    	/* if there's no previous slide, it takes last slide */
+    	if(slidePrev.length===0) {
+    		slidePrev = trigger.parent().next().find('div.hide:last-child');
+    		slideActive.addClass('hide').removeClass('active');
+    		slidePrev.removeClass('hide').addClass('active');
+    	} else {
+	    	slideActive.addClass('hide').removeClass('active');
+	    	slidePrev.removeClass('hide').addClass('active');
+	    }
     };
 
+    /* this function uploads new slide of games */
     $scope.nextSlide = function(item) {
     	var trigger = $(item.target);
     	var slideActive = trigger.parent().prev().find('div.active');
     	var slideNext = slideActive.next();
-    	slideActive.addClass('hide').removeClass('active');
-    	slideNext.removeClass('hide').addClass('active');
+    	/* if there's no next slide, it takes first slide */
+    	if(slideNext.length===0) {
+    		slideNext = trigger.parent().prev().find('div.hide:first-child');
+    		slideActive.addClass('hide').removeClass('active');
+    		slideNext.removeClass('hide').addClass('active');
+    	} else {
+	    	slideActive.addClass('hide').removeClass('active');
+    		slideNext.removeClass('hide').addClass('active');
+	    }
     };
 }]);

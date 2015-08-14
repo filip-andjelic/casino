@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Test</title>
+    </head>
+    <body>
+        <!-- <iframe width="1000px" height="800px" src="test_send_session.php"></iframe> -->
+        <script src="../build/js/vendor.js"></script>
+        <script>
+            $.ajax({
+                url: 'http://mobile-api.dev.sansabet.com/web/casino/authenticate/session/622bumlcvcj70lh2ibfo9e9882',
+                type: 'GET',
+                dataType: 'json',
+                xhrFields: {withCredentials: true},
+                success: function(data){
+                    console.log(data);
+                    $.ajax({
+                        url: 'http://mobile-api.dev.sansabet.com/web/casino/authenticate/session/622bumlcvcj70lh2ibfo9e9882',
+                        type: 'GET',
+                        dataType: 'json',
+                        xhrFields: {withCredentials: true},
+                        success: function(data){
+                            console.log(data);
+                        },
+                        error: function(x, y, z){
+                            $('#err').html(x.responseText);
+                            console.log(x);
+                            console.log(y);
+                            console.log(z);
+                        }
+                    });
+                },
+                error: function(x, y, z){
+                    $('#err').html(x.responseText);
+                    console.log(x);
+                    console.log(y);
+                    console.log(z);
+                }
+            });
+        </script>
+    <div id="err"></div>
+    </body>
+</html>
